@@ -16,6 +16,10 @@ public class BoldlyGoKotlinFromJava {
         "Glorious Heritage Class",
         Collections.singletonList(captain)
     );
+
+    if (BoldlyGoClassesKt.contains(andromeda, captain)) {
+      System.out.println("Hey, " + captain.getName() + "!");
+    }
   }
 }
 
