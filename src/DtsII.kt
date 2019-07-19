@@ -721,14 +721,14 @@ class SillyUser {
   var name by SillyNameDelegate() // Actual property delegation.
 }
 
-fun main() {
+/*fun main() {
   val user = SillyUser()
   println(user.name) // Something random
   println(user.name) // Something random
   user.name = "Jerry"
   println(user.name) // Jerry
   println(user.name) // Jerry
-}
+}*/
 
 
 
@@ -792,6 +792,14 @@ fun didThingsHappen(): Boolean {
 }
 
 }
+
+fun main() {
+  val briefcase = Briefcase()
+  println("Got the briefcase.")
+  briefcase.thing.resolveThePlot()
+  println("Fin.")
+}
+
 
 
 
