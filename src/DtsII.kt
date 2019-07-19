@@ -378,6 +378,7 @@ fun funWithTheCrew(): MutableList<CrewMember> {
   return crewMembers
 }
 
+/*
 fun main() {
   val nseaProtector = Ship(
     name = "Protector",
@@ -412,6 +413,7 @@ fun main() {
   val crewManLarry = nseaProtector[name]
   println(if (crewManLarry != null) "Hey! $name" else "Who is $name?")
 }
+*/
 
 
 
@@ -519,6 +521,15 @@ fun main() {
 
 fun destructurePair() {
   val (first, second) = "One" to "Two"
+
+  for ((key, value) in fleetMap) {
+    println("The $key is a ${value.vesselClass}")
+  }
+}
+
+fun main() {
+  val (name, vesselClass, crew) = enterprise
+  println("The $name is a $vesselClass with ${crew.size} members.")
 }
 
 

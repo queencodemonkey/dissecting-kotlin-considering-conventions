@@ -19,6 +19,10 @@ class Ship(
   crew: List<CrewMember> = emptyList()
 ) {
 
+  operator fun component1(): String = name
+  operator fun component2(): String = vesselClass
+  operator fun component3(): List<CrewMember> = crew
+
   private var _crew: MutableList<CrewMember> = crew.toMutableList()
   val crew: List<CrewMember>
     get() = _crew
