@@ -527,10 +527,10 @@ fun destructurePair() {
   }
 }
 
-fun main() {
+/*fun main() {
   val (name, vesselClass, crew) = enterprise
   println("The $name is a $vesselClass with ${crew.size} members.")
-}
+}*/
 
 
 

@@ -14,6 +14,20 @@ fun main() {
   val ncc1701d = Ship("Enterprise NCC-1701B", "Galaxy")
   val ncc1701e = Ship("Enterprise NCC-1701B", "Sovereign")
   val defiant = Ship("USS Defiant NX-74205", "Defiant")
+
+  jeanLucPicard assignedTo ncc1701a
+  worf transferredFrom ncc1701b
+  worf assignedTo defiant
+
+  var isHere = jeanLucPicard in ncc1701d
+  println("Is there a John Luck Pickerd here? ${if (isHere) "YES!" else "NO!"}")
+  isHere = worf in ncc1701d
+  println("Is Worf here? ${if (isHere) "YES!" else "NO!"}")
+
+  // Compare to…
+//  enterprise += jeanLucPicard
+//  enterprise -= worf
+//  defiant += worf
 }
 
 

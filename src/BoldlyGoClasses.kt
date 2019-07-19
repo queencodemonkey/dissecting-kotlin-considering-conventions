@@ -70,6 +70,14 @@ class IteratorShip(
 sealed class CrewMember {
   abstract val name: String
   abstract val rank: Int
+
+  infix fun assignedTo(ship: Ship) {
+    ship += this
+  }
+
+  infix fun transferredFrom(ship: Ship) {
+    ship -= this
+  }
 }
 
 data class ImpetuousCaptain(
