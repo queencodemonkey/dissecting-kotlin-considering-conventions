@@ -20,9 +20,9 @@ fun main() {
     crew = listOf(jeanLucPicard, data)
   )
 
-//  for (member: CrewMember in nseaProtector) {
-//    println("${member.name}: ${nseaProtector.name}")
-//  }
+  for (member: CrewMember in nseaProtector) {
+    println("${member.name}: ${nseaProtector.name}")
+  }
 
   for (member: CrewMember in enterprise) {
     println("${member.name}: ${enterprise.name}")

@@ -378,6 +378,40 @@ fun funWithTheCrew(): MutableList<CrewMember> {
   return crewMembers
 }
 
+fun main() {
+  val nseaProtector = Ship(
+    name = "Protector",
+    vesselClass = "Evolution Heavy Cruiser",
+    crew = listOf(commanderTaggert, doctorLazerus, tawnyMadison)
+  )
+
+  nseaProtector += crewMember08
+
+  for (member: CrewMember in nseaProtector) {
+    println("${member.name} is on the ${nseaProtector.name}")
+  }
+
+  // Oops, an ill-advised away mission occurred!
+  nseaProtector -= crewMember08
+
+  for (member: CrewMember in nseaProtector) {
+    println("> ${member.name} is on the ${nseaProtector.name}")
+  }
+
+  nseaProtector += techSergeantChen
+
+  if (techSergeantChen in nseaProtector) {
+    println("That was a hell of a thing.")
+  } else {
+    println("Where is Tech Sergeant Chen?")
+  }
+
+  println("Second crew member: ${nseaProtector[1]}")
+
+  val name = "Jason Nesmith"
+  val crewManLarry = nseaProtector[name]
+  println(if (crewManLarry != null) "Hey! $name" else "Who is $name?")
+}
 
 
 

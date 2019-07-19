@@ -24,7 +24,24 @@ class Ship(
     get() = _crew
 
   // This ship needs some upgrades.
+
+  operator fun iterator(): Iterator<CrewMember> = _crew.iterator()
+
+  operator fun plusAssign(crewMember: CrewMember) {
+    _crew.add(crewMember)
+  }
+
+  operator fun minusAssign(crewMember: CrewMember) {
+    _crew.remove(crewMember)
+  }
+
+  operator fun get(index: Int): CrewMember = _crew[index]
+
+  operator fun get(name: String): CrewMember? = _crew.find { it.name == name }
+
 }
+
+operator fun Ship.contains(member: CrewMember): Boolean = crew.contains(member)
 
 
 class IteratorShip(

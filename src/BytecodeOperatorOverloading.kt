@@ -13,15 +13,15 @@ fun main() {
     crew = listOf(commanderTaggert, doctorLazerus)
   )
 
-//  for (memberName: CrewMember in nseaProtector) {
-//    println("$memberName is a member of the ${nseaProtector.name}")
-//  }
-//
-//  nseaProtector += techSergeantChen
-//
-//  if (techSergeantChen in nseaProtector) {
-//    println("That was a hell of a thing.")
-//  } else {
-//    println("Where is Tech Sergeant Chen?")
-//  }
+  for (memberName: CrewMember in nseaProtector) {
+    println("$memberName is a member of the ${nseaProtector.name}")
+  }
+
+  nseaProtector += techSergeantChen
+
+  if (techSergeantChen in nseaProtector) {
+    println("That was a hell of a thing.")
+  } else {
+    println("Where is Tech Sergeant Chen?")
+  }
 }
