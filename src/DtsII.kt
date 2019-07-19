@@ -721,6 +721,15 @@ class SillyUser {
   var name by SillyNameDelegate() // Actual property delegation.
 }
 
+fun main() {
+  val user = SillyUser()
+  println(user.name) // Something random
+  println(user.name) // Something random
+  user.name = "Jerry"
+  println(user.name) // Jerry
+  println(user.name) // Jerry
+}
+
 
 
 

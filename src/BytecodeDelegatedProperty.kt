@@ -29,6 +29,7 @@ class AnotherSillyNameDelegate {
 }
 
 class AnotherSillyUser {
+  var surname: String = "Nguyen"
   var name by AnotherSillyNameDelegate() // Actual property delegation.
 }
 
