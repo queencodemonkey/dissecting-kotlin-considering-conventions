@@ -18,8 +18,8 @@ fun main() {
     crew = funWithTheCrew()
   )
 
-//  nseaProtector += crewMember08
-//  val newShip = nseaProtector + jeanLucPicard
+  nseaProtector += crewMember08
+//  val newShip: Ship = nseaProtector + jeanLucPicard
 }
 
 

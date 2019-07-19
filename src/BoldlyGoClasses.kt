@@ -31,6 +31,10 @@ class Ship(
     _crew.add(crewMember)
   }
 
+//  operator fun plus(crewMember: CrewMember): Ship {
+//    return Ship(name, vesselClass, crew.plus(crewMember))
+//  }
+
   operator fun minusAssign(crewMember: CrewMember) {
     _crew.remove(crewMember)
   }
