@@ -721,6 +721,12 @@ class MacGuffin {
   }
 }
 
+fun didThingsHappen(): Boolean {
+  //region Figure out if all that plot stuff happened.
+  return false
+  //endregion
+}
+
 class Briefcase {
   val thing: MacGuffin = findTheMacGuffin()
 //  val otherThing: MacGuffin by lazy { findTheMacGuffin() }
