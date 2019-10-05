@@ -760,6 +760,7 @@ class Briefcase {
 //
 //    Huyen Tue Dao
 //    @queencodemonkey
+//    github.com/queencodemonkey/dissecting-kotlin-considering-conventions
 //
 //    randomlytyping.com
 //    youtube.com/androiddialogs
