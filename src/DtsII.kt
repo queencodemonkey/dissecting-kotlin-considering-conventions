@@ -1,11 +1,10 @@
-// region // Pay no attention to the man behind the curtain
 @file:Suppress("unused", "ConvertCallChainIntoSequence", "UNUSED_VARIABLE")
 
 import MacGuffin.Companion.findTheMacGuffin
 import kotlin.random.Random
 import kotlin.reflect.KProperty
 
-// endregion
+
 
 
 
@@ -50,7 +49,7 @@ import kotlin.reflect.KProperty
 
 //
 //
-//    What is idiomatic Kotlin?
+//    What is idiomatic Kotlin?￿
 //
 //    ¯\(°_o)/¯
 //
@@ -225,15 +224,15 @@ import kotlin.reflect.KProperty
 //
 
 fun loopAllThingThings() {
-  val threeThings: List<String> = listOf("one", "two", "three")
-  for (thing in threeThings) {
-    // Do some stuff in a loop
-  }
+    val threeThings: List<String> = listOf("one", "two", "three")
+    for (thing in threeThings) {
+        // Do some stuff in a loop
+    }
 
-  val setOfThreeThings: Set<String> = setOf("eins", "zwei", "drei")
-  for (thing in setOfThreeThings) {
-    // Do some other stuff
-  }
+    val setOfThreeThings: Set<String> = setOf("eins", "zwei", "drei")
+    for (thing in setOfThreeThings) {
+        // Do some other stuff
+    }
 }
 
 
@@ -342,17 +341,17 @@ fun loopAllThingThings() {
 //
 
 fun getCrewForAwayMission(
-  minRank: Int,
-  commandDeck: List<CrewMember>,
-  engineering: List<StalwartEngineer>,
-  medBay: List<CrewMember>,
-  other: List<RedShirt>
+        minRank: Int,
+        commandDeck: List<CrewMember>,
+        engineering: List<StalwartEngineer>,
+        medBay: List<CrewMember>,
+        other: List<RedShirt>
 ) = commandDeck.filter { it is ImpetuousCaptain || it is EnigmaticScienceOfficer }
-  .plus(engineering.first { !it.doingRepairs })
-  .plus(medBay.first { it is OrneryDoctor && it.isNotAMechanic })
-  .plus(other.filterNot { it.isDead }.takeLast(3))
-  .filter { it.rank > minRank }
-  .sortedBy(CrewMember::rank)
+        .plus(engineering.first { !it.doingRepairs })
+        .plus(medBay.first { it is OrneryDoctor && it.isNotAMechanic })
+        .plus(other.filterNot { it.isDead }.takeLast(3))
+        .filter { it.rank > minRank }
+        .sortedBy(CrewMember::rank)
 
 
 
@@ -374,10 +373,10 @@ val tawnyMadison = ComputerAiRepeater("Gwen Demarco", 2, true)
 val crewMember08 = RedShirt("Guy Fleegman", 5, false)
 
 fun funWithTheCrew(): MutableList<CrewMember> {
-  val crewMembers = mutableListOf<CrewMember>()
-  crewMembers += commanderTaggert
-  crewMembers += doctorLazerus
-  return crewMembers
+    val crewMembers = mutableListOf<CrewMember>()
+    crewMembers += commanderTaggert
+    crewMembers += doctorLazerus
+    return crewMembers
 }
 
 
@@ -463,15 +462,6 @@ fun funWithTheCrew(): MutableList<CrewMember> {
 
 
 
-
-
-
-
-
-
-
-
-
 //
 //     ___            _                   _               _
 //    |   \  ___  ___| |_  _ _  _  _  __ | |_  _  _  _ _ (_) _ _   __ _
@@ -486,7 +476,7 @@ fun funWithTheCrew(): MutableList<CrewMember> {
 //
 
 fun destructurePair() {
-  val (first, second) = "One" to "Two"
+    val (first, second) = "One" to "Two"
 }
 
 
@@ -537,11 +527,11 @@ fun destructurePair() {
 
 
 val favoritePairs = mapOf(
-  "Stark" to "Banner",
-  "Mulder" to "Scully",
-  "Turner" to "Hooch",
-  "Milly" to "Nicholas",
-  "Saitama" to "Genos"
+        "Stark" to "Banner",
+        "Mulder" to "Scully",
+        "Turner" to "Hooch",
+        "Milly" to "Nicholas",
+        "Saitama" to "Genos"
 )
 
 
@@ -586,13 +576,13 @@ val favoritePairs = mapOf(
 //
 
 fun countdown(n: Int) {
-  (n downTo 0).forEach {
-    println("$it!")
-  }
+    (n downTo 0).forEach {
+        println("$it!")
+    }
 }
 
 fun divideByTwo(n: Int): Int {
-  return n shr 1
+    return n shr 1
 }
 
 
@@ -655,26 +645,26 @@ fun divideByTwo(n: Int): Int {
 
 
 class SillyNameDelegate {
-  private var actualName: String? = null
+    private var actualName: String? = null
 
-  private val placeholderNames: List<String> = listOf(
-    "Englebert", "Cheeto", "Mojo", "Protagonist", "Kopfgeschlagen",
-    "Balvenie", "Monkey Shoulder", "Pumat Sol"
-  )
+    private val placeholderNames: List<String> = listOf(
+            "Englebert", "Cheeto", "Mojo", "Protagonist", "Kopfgeschlagen",
+            "Balvenie", "Monkey Shoulder", "Pumat Sol"
+    )
 
-  // Getter
-  operator fun getValue(thisRef: Any, property: KProperty<*>): String? {
-    return actualName ?: placeholderNames[Random.nextInt(0, placeholderNames.size)]
-  }
+    // Getter
+    operator fun getValue(thisRef: Any, property: KProperty<*>): String? {
+        return actualName ?: placeholderNames[Random.nextInt(0, placeholderNames.size)]
+    }
 
-  // Setter
-  operator fun setValue(thisRef: Any, property: KProperty<*>, value: String?) {
-    actualName = value
-  }
+    // Setter
+    operator fun setValue(thisRef: Any, property: KProperty<*>, value: String?) {
+        actualName = value
+    }
 }
 
 class SillyUser {
-  var name by SillyNameDelegate() // Actual property delegation.
+    var name by SillyNameDelegate() // Actual property delegation.
 }
 
 
@@ -708,22 +698,22 @@ class SillyUser {
 
 class MacGuffin {
 
-  // TODO: Insert an actual plot instead of relying on tropes
-  fun resolveThePlot() {
-    //region Denouement
-    //endregion
-  }
-
-  companion object {
-    fun findTheMacGuffin(): MacGuffin {
-      println("Some weird, complex, and expensive stuff is happening…")
-      return MacGuffin()
+    // TODO: Insert an actual plot instead of relying on tropes
+    fun resolveThePlot() {
+        //region Denouement
+        //endregion
     }
-  }
+
+    companion object {
+        fun findTheMacGuffin(): MacGuffin {
+            println("Some weird, complex, and expensive stuff is happening…")
+            return MacGuffin()
+        }
+    }
 }
 
 class Briefcase {
-  val thing: MacGuffin = findTheMacGuffin()
+    val thing: MacGuffin = findTheMacGuffin()
 //  val otherThing: MacGuffin by lazy { findTheMacGuffin() }
 }
 
